@@ -1,5 +1,7 @@
 package cn.upfinder.pricecalendar.adapter;
 
+import android.content.Context;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,9 +19,11 @@ import cn.upfinder.pricecalendar.data.MouthData;
 public class MouthAdapter extends RecyclerView.Adapter<MouthViewHolder> {
 
     private List<MouthData> mouths;
+    private Context mContext;
 
 
-    public MouthAdapter(List<MouthData> mouths) {
+    public MouthAdapter(Context context, List<MouthData> mouths) {
+        this.mContext = context;
         this.mouths = mouths;
     }
 
@@ -33,6 +37,10 @@ public class MouthAdapter extends RecyclerView.Adapter<MouthViewHolder> {
 
     @Override
     public void onBindViewHolder(MouthViewHolder holder, int position) {
+
+        MouthData mouth = mouths.get(position);
+        holder.tvMouthName.setText(mouth.getMouthName());
+        holder.rvMouth.setLayoutManager(new GridLayoutManager(mContext, 7));
 
 
     }

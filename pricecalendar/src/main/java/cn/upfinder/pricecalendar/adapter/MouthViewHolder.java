@@ -14,10 +14,10 @@ import cn.upfinder.pricecalendar.R;
 
 public class MouthViewHolder extends RecyclerView.ViewHolder {
 
-    public LinearLayout llWeek;
-    public RecyclerView rvMouth;
-    public ImageView ivLastMouth;
-    ImageView ivNextMouth;
+    private LinearLayout llWeek;
+    private ImageView ivLastMouth;
+    private ImageView ivNextMouth;
+    RecyclerView rvMouth;
     TextView tvMouthName;
 
 
