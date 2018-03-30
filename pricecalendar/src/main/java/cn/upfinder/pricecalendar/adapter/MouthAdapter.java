@@ -37,16 +37,14 @@ public class MouthAdapter extends RecyclerView.Adapter<MouthViewHolder> {
 
     @Override
     public void onBindViewHolder(MouthViewHolder holder, int position) {
-
         MouthData mouth = mouths.get(position);
         holder.tvMouthName.setText(mouth.getMouthName());
         holder.rvMouth.setLayoutManager(new GridLayoutManager(mContext, 7));
-
-
+        holder.rvMouth.setAdapter(new DayAdapter(mouth.getDays()));
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return mouths.size();
     }
 }

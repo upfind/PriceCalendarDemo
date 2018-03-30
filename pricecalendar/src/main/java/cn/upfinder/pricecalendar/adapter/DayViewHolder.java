@@ -21,7 +21,7 @@ public class DayViewHolder extends RecyclerView.ViewHolder {
 
     public DayViewHolder(View itemView) {
         super(itemView);
-        rvBg = itemView.findViewById(R.id.rvDay);
+        rvBg = itemView.findViewById(R.id.rlDay);
         tvDay = itemView.findViewById(R.id.tvDay);
         tvInfo = itemView.findViewById(R.id.tvInfo);
     }

@@ -19,7 +19,7 @@ public class DayAdapter extends RecyclerView.Adapter<DayViewHolder> {
 
     private List<DayBean> days;
 
-    private DayAdapter(List<DayBean> days) {
+    DayAdapter(List<DayBean> days) {
         this.days = days;
     }
 
