@@ -44,7 +44,8 @@ public class MouthAdapter extends RecyclerView.Adapter<MouthViewHolder> {
     public void onBindViewHolder(MouthViewHolder holder, int position) {
         MouthData mouth = mouths.get(position);
         holder.tvMouthName.setText(mouth.getMouthName());
-        holder.rvMouth.setLayoutManager(new GridLayoutManager(mContext, 7));
+        GridLayoutManager layoutManager = new GridLayoutManager(mContext, 7, GridLayoutManager.VERTICAL, false);
+        holder.rvMouth.setLayoutManager(layoutManager);
         holder.rvMouth.setAdapter(new DayAdapter(mouth.getDays()));
     }
 

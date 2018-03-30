@@ -8,8 +8,8 @@ public class DayBean {
 
     private String info; //日期底部信息 220元
     private String dayNum;  //日期 1，2 ，3等
-
     private DayState state; //日期状态 可选不可选等
+    private String mouthNum; //所属月份
 
 
     public String getInfo() {
@@ -34,5 +34,13 @@ public class DayBean {
 
     public void setState(DayState state) {
         this.state = state;
+    }
+
+    public String getMouthNum() {
+        return mouthNum;
+    }
+
+    public void setMouthNum(String mouthNum) {
+        this.mouthNum = mouthNum;
     }
 }
