@@ -55,7 +55,7 @@ public class PriceCalendar extends RecyclerView {
 
     public void setNewData(List<MouthData> mouths) {
         this.mMouths = mouths;
-        adapter.notifyDataSetChanged();
+        adapter.setNewDatas(mouths);
     }
 
 

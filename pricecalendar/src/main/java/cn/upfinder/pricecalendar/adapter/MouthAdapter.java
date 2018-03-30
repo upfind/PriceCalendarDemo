@@ -28,6 +28,11 @@ public class MouthAdapter extends RecyclerView.Adapter<MouthViewHolder> {
     }
 
 
+    public void setNewDatas(List<MouthData> mouths) {
+        this.mouths = mouths;
+        notifyDataSetChanged();
+    }
+
     @Override
     public MouthViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cell_mouth_layout, parent, false);
